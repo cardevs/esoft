@@ -5,15 +5,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
-
+#include <math.h>
+double hiperfatorial(int n)
+{
+	if(n==0)
+	return 0;
+	
+	double produto=1;
+	int i;
+	
+	for(i=1; i<=n;i++)
+	produto*=pow(n,n);
+	return produto;
+	
+	
+	
+}
 
 
 
 
 int main()
 {
-	
+
+int valor;//Variavel que será usada para inserir valores a pedido do utilizador	
 //    printf("Hello world!\n");
 int op=1;//variavel que servirá para armazenar valores das opções do menu
 
@@ -47,6 +62,9 @@ int op=1;//variavel que servirá para armazenar valores das opções do menu
         					
         					break;
         					case 5:
+        						printf("\nInsira o valor a  para calcular o hiperfatorial: ");
+        						scanf("%d",&valor);
+        						printf("\nO hiperfatorial de %d e %.f\n",valor,hiperfatorial(valor));
         						
         						break;
         						case 0:
