@@ -21,7 +21,17 @@ double hiperfatorial(int n)
 	
 	
 }
-
+int Tribo(int n){
+	if((n==0)||(n==1)){
+		return 0;
+	}else{
+		if(n==2){
+			return 1;
+		}else{
+			return Tribo(n-1)+ Tribo(n-2) +Tribo(n-3);
+		}
+	}
+}
 
 
 
@@ -52,6 +62,9 @@ int op=1;//variavel que servirá para armazenar valores das opções do menu
         switch(op)
         {
         	case 1:
+    						printf("\nInsira o valor a  para calcular o Tribonacci: ");
+    						scanf("%d",&valor);
+    						printf("\nO Tribonacci de %d e %d.\n\n\n",valor,Tribo(valor));
         		break;
         		case 2:
         			
@@ -64,7 +77,7 @@ int op=1;//variavel que servirá para armazenar valores das opções do menu
         					case 5:
         						printf("\nInsira o valor a  para calcular o hiperfatorial: ");
         						scanf("%d",&valor);
-        						printf("\nO hiperfatorial de %d e %.f\n",valor,hiperfatorial(valor));
+        						printf("\nO hiperfatorial de %d e %f.\n",valor,hiperfatorial(valor));
         						
         						break;
         						case 0:
