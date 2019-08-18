@@ -33,6 +33,18 @@ int fatDuplo(int n){
 	return num;
 }
 
+int Tribo(int n){
+	if((n==0)||(n==1)){
+		return 0;
+	}else{
+		if(n==2){
+			return 1;
+		}else{
+			return Tribo(n-1)+Tribo(n-2)+Tribo(n-3);
+		}
+	}
+}
+
 
 int main()
 {
@@ -61,6 +73,9 @@ int op=1;//variavel que servirá para armazenar valores das opções do menu
         switch(op)
         {
         	case 1:
+        		printf("\nInsira o valor a  para calcular o 	Tribonancci: ");
+				scanf("%d",&valor);
+				printf("\nO Tribonancci de %d e %d.\n\n\n",valor,Tribo(valor));
         		break;
         		case 2:
         			
