@@ -1,4 +1,5 @@
 /*Carneiros Unidos jamais serão vencidos!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*O carneiro Edson kay já esteve aqui*/
 
 
 
@@ -22,7 +23,15 @@ double hiperfatorial(int n)
 	
 }
 
-
+int fatDuplo(int n){
+	int i=1,num=1;
+	for(i;i<=n;i++){
+		if(i%2!=0){
+			num=i*num;
+		}
+	}
+	return num;
+}
 
 
 int main()
@@ -59,12 +68,15 @@ int op=1;//variavel que servirá para armazenar valores das opções do menu
         			case 3:
         				break;
         				case 4:
-        					
+        						printf("\nInsira o valor a  para calcular o Fatorial Duplo: ");
+        						scanf("%d",&valor);
+        						printf("\nO Fatorial Duplo de %d e %d.\n\n\n",valor,fatDuplo(valor));
+        						
         					break;
         					case 5:
         						printf("\nInsira o valor a  para calcular o hiperfatorial: ");
         						scanf("%d",&valor);
-        						printf("\nO hiperfatorial de %d e %.f\n",valor,hiperfatorial(valor));
+        						printf("\nO hiperfatorial de %d e %f.\n\n\n",valor,hiperfatorial(valor));
         						
         						break;
         						case 0:
